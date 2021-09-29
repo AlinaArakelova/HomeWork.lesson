@@ -1,51 +1,52 @@
 package ru.geekbrains.homework1;
 
-public class HomeWorkApp { 
+
+public class HomeWorkApp {
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign(1, 10);
-        printColor();
-        compareNumbers();
-    }
+        if (checkSum(4, 6)) {
 
-    public static void printThreeWords() {
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
-    }
-
-    public static void checkSumSign(int a, int b) {
-        int sum = a + b;
-        if (sum >= 0) {
-            System.out.println("Сумма положительная");
         } else {
-            System.out.println("Сумма отрицательная");
+
         }
 
-    }
+        printLines(9, "alina");
 
-    public static void printColor() {
-        int value = 106;
-        if (value <= 0) {
-            System.out.println("Красный");
-        }
-        if (value > 0 && value <= 100) {
-            System.out.println("Желтый");
-        }
-        if (value > 100) {
-            System.out.println("Зеленый");
+        for (var i = 2000; i < 2030; i++) {
+            System.out.println(i + " year = " + checkYear(i));
         }
     }
 
-    public static void compareNumbers() {
-        int a = 15;
-        int b = 25;
-        if (a >= b) {
-            System.out.println("a >= b");
+    public static boolean checkSum(int a, int b) {
+        int i = a + b;
+        //return (i >= 10 && i <= 20);
+        if (i >= 10 && i <= 20) {
+            return true;
         } else {
-            System.out.println("a < b");
+            return false;
         }
-
     }
 
+
+    public static void checkNumber(int a) {
+        if (a >= 0) {
+            System.out.println("Положительное");
+        } else {
+            System.out.println("Отрицательное");
+        }
+    }
+
+
+
+    public static boolean checkNumberNegative(int a) {
+        if (a < 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void printLines(int n, String l) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i + l);
+        }
+    }
 }
