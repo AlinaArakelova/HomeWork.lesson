@@ -10,10 +10,6 @@ public class HomeWorkApp {
         }
 
         printLines(9, "alina");
-
-        for (var i = 2000; i < 2030; i++) {
-            System.out.println(i + " year = " + checkYear(i));
-        }
     }
 
     public static boolean checkSum(int a, int b) {
